@@ -1,0 +1,16 @@
+﻿@page "/"
+
+<h1>Set a breakpoint in the source code (Index.razor)...</h1>
+
+<button class="btn btn-primary" @onclick="IncrementCount">...and click me</button>
+
+<h1>You should hit the breakpoint if everything is correct. If the counter goes up without hitting the breakpoint, something is wrong.</h1>
+
+<p>Count: @TestClass.Instance.Counter</p>
+
+@code {
+    private void IncrementCount()
+    {
+        TestClass.Instance.Counter++; // put breakpoint here
+    }
+}
